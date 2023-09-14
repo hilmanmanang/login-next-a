@@ -28,7 +28,6 @@ export default function Home() {
             body: JSON.stringify(globalDatas)
         });
         const data = await response.json();
-        console.log(data);
     }
 
     return (
