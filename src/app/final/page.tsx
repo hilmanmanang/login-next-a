@@ -1,6 +1,6 @@
 "use client"
 import { useGlobalContext } from "@/providers/context/globalContext";
-import { Button, Container, Stack, TextField, Typography } from "@mui/material";
+import { Button, Container, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Home() {
@@ -30,12 +30,12 @@ export default function Home() {
                 color: 'white',
                 fontSize: '24px',
                 fontWeight: 700
-            }}>Landing Page</Typography>
+            }}>Final Page</Typography>
             <TextField
-                name="name"
+                name="age"
                 type="text"
                 onChange={handleInputChange}
-                placeholder="Name"
+                placeholder="Age"
                 sx={{
                     width: '100%',
                     'input': {
@@ -44,17 +44,17 @@ export default function Home() {
                     }
                 }} />
             <TextField
-                name="email"
-                type="email"
+                name="phone"
+                type="text"
                 onChange={handleInputChange}
-                placeholder="Email address"
+                placeholder="Phone Number"
                 sx={{
                     width: '100%',
                     'input': {
                         color: 'white',
                     }
                 }} />
-            <Link href="/details">
+            <Link href="/localisation">
                 <Button sx={{
                     bgcolor: 'orange',
                     color: 'white',
