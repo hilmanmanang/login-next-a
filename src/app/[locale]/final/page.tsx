@@ -23,7 +23,6 @@ export default function Home() {
             }
         })
         const data = await response.json();
-        console.log(JSON.parse(data || '[]'))
         setAllRecords(JSON.parse(data || '[]'))
     }
 
@@ -35,7 +34,6 @@ export default function Home() {
             }
         })
         const data = await response.json();
-        console.log(data)
         setLatestRecord(data)
     }
 
@@ -47,12 +45,10 @@ export default function Home() {
             }
         })
         const data = await response.json();
-        console.log(data)
         setCount(data)
     }
 
     useLayoutEffect(() => {
-        console.log(pathname)
         if (pathname === '/final') setLang('en')
         else setLang('my')
     }, [pathname])
