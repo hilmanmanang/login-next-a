@@ -1,0 +1,19 @@
+{
+    "Index": {
+        "name": "Name",
+        "email": "Email",
+        "age": "Age",
+        "phone": "Phone",
+        "language": "Language",
+        "next": "NEXT",
+        "back": "BACK",
+        "submit": "SUBMIT",
+        "landing_page": "Landing Page",
+        "details_page": "Details Page",
+        "localisation_page": "Localisation Page",
+        "final_page": "Final Page",
+        "current_record": "Current Record",
+        "list_record": "List Record",
+        "create_new": "Create New"
+    }
+}

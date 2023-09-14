@@ -4,14 +4,16 @@ export interface GlobalData {
     name: string,
     email: string,
     age: string,
-    phone: string
+    phone: string,
+    language: string
 }
 
 export const initGlobalData: GlobalData = {
     name: '',
     email: '',
     age: '',
-    phone: ''
+    phone: '',
+    language: 'en'
 }
 
 export interface ContextProps {

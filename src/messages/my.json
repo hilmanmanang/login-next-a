@@ -1,0 +1,19 @@
+{
+    "Index": {
+        "name": "Nama",
+        "email": "Emel",
+        "age": "Umur",
+        "phone": "Telefon",
+        "language": "Bahasa",
+        "next": "SETERUSNYA",
+        "back": "KEMBALI",
+        "submit": "HANTAR",
+        "landing_page": "Halaman Arahan",
+        "details_page": "Halaman Butiran",
+        "localisation_page": "Halaman Penyetempatan",
+        "final_page": "Halaman Terakhir",
+        "current_record": "Rekod Terkini",
+        "list_record": "Senarai Rekod",
+        "create_new": "Buat Semula"
+    }
+}
