@@ -126,7 +126,7 @@ export default function Home() {
                     </TableBody>
                 </Table>
             </TableContainer>}
-            <Link href="/details">
+            <Link href="/">
                 <Button sx={customButtonPrimary}>{t('create_new')}</Button>
             </Link>
         </Container>
