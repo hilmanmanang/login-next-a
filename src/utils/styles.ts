@@ -1,7 +1,7 @@
 export const customContainer = {
     minHeight: '100vh',
     maxWidth: '800px',
-    px: '20px',
+    p: '20px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -57,7 +57,9 @@ export const customLinkSelect = {
 export const customFooter = {
     flexDirection: {
         md: 'row',
-        xs: 'column'
+        xs: 'column-reverse'
     },
-    gap: '8px'
+    gap: '8px',
+    width: '100%',
+    justifyContent: 'flex-end'
 }

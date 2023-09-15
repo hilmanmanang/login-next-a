@@ -45,6 +45,7 @@ export default function Home() {
             }
         })
         const data = await response.json();
+        console.log(data)
         setCount(data)
     }
 
@@ -55,22 +56,39 @@ export default function Home() {
 
     useEffect(() => {
         getCountData()
+        console.log('sss')
         getLatestData()
     }, [])
 
     return (
         <Container sx={customContainer}>
             <Typography sx={customTitle}>{t('final_page')}</Typography>
-            <Stack direction="row" alignItems="center" gap="8px" justifyContent="flex-end">
-                <Typography sx={customTitle2}>{t('language')}</Typography>
-                <Select sx={customTextField} value={lang}>
-                    <MenuItem value={'en'}>
-                        <Link href="/final" locale="en" style={customLinkSelect}>EN</Link>
-                    </MenuItem>
-                    <MenuItem value={'my'}>
-                        <Link href="/final" locale="my" style={customLinkSelect}>MY</Link>
-                    </MenuItem>
-                </Select>
+            <Stack justifyContent="space-between"
+            gap="8px"
+                sx={{
+                    width: '100%',
+                    flexDirection: {
+                        md: 'row',
+                        xs: 'column-reverse'
+                    }
+                }}>
+                <Link href="/">
+                    <Button sx={customButtonPrimary}>{t('create_new')}</Button>
+                </Link>
+                <Stack direction="row" alignItems="center" gap="8px" justifyContent="flex-end">
+                    <Typography sx={customTitle2}>{t('language')}</Typography>
+                    <Select sx={{
+                        ...customTextField,
+                        width: 'unset'
+                        }} value={lang}>
+                        <MenuItem value={'en'}>
+                            <Link href="/final" locale="en" style={customLinkSelect}>EN</Link>
+                        </MenuItem>
+                        <MenuItem value={'my'}>
+                            <Link href="/final" locale="my" style={customLinkSelect}>MY</Link>
+                        </MenuItem>
+                    </Select>
+                </Stack>
             </Stack>
             <Typography sx={customTitle2}>
                 {t('current_record')}:
@@ -79,23 +97,23 @@ export default function Home() {
                 <Table>
                     <TableBody>
                         <TableRow>
-                            <TableCell>{t('name')}</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>{t('name')}</TableCell>
                             <TableCell>{latestRecord?.name}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>{t('email')}</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>{t('email')}</TableCell>
                             <TableCell>{latestRecord?.email}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>{t('age')}</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>{t('age')}</TableCell>
                             <TableCell>{latestRecord?.age}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>{t('phone')}</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>{t('phone')}</TableCell>
                             <TableCell>{latestRecord?.phone}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>{t('language')}</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>{t('language')}</TableCell>
                             <TableCell sx={{ textTransform: 'uppercase' }}>{latestRecord?.language}</TableCell>
                         </TableRow>
                     </TableBody>
@@ -126,9 +144,6 @@ export default function Home() {
                     </TableBody>
                 </Table>
             </TableContainer>}
-            <Link href="/">
-                <Button sx={customButtonPrimary}>{t('create_new')}</Button>
-            </Link>
         </Container>
     )
 }
