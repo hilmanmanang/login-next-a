@@ -14,6 +14,7 @@
         "final_page": "Final Page",
         "current_record": "Current Record",
         "list_record": "List Record",
-        "create_new": "Create New"
+        "create_new": "Create New",
+        "enter": "Enter "
     }
 }

@@ -1,6 +1,6 @@
 "use client"
 import { useGlobalContext } from "@/providers/context/globalContext";
-import { customButtonPrimary, customButtonSecondary, customContainer, customFooter, customTextField, customTitle } from "@/utils/styles";
+import { customButtonPrimary, customButtonSecondary, customContainer, customFooter, customLabel, customTextField, customTitle } from "@/utils/styles";
 import { Button, Container, MenuItem, Select, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -28,19 +28,21 @@ export default function Home() {
             body: JSON.stringify(globalDatas)
         });
         const data = await response.json();
-        console.log(response)
     }
 
     return (
         <Container sx={customContainer}>
             <Typography sx={customTitle}>{t('localisation_page')}</Typography>
-            <Select value={globalDatas.language}
-                name="language"
-                onChange={handleSelectChange}
-                sx={customTextField}>
-                <MenuItem value={'en'}>EN</MenuItem>
-                <MenuItem value={'my'}>MY</MenuItem>
-            </Select>
+            <Container>
+                <Typography sx={customLabel}>{t('language')}*</Typography>
+                <Select value={globalDatas.language}
+                    name="language"
+                    onChange={handleSelectChange}
+                    sx={customTextField}>
+                    <MenuItem value={'en'}>EN</MenuItem>
+                    <MenuItem value={'my'}>MY</MenuItem>
+                </Select>
+            </Container>
             <Stack sx={customFooter}>
                 <Button sx={customButtonSecondary} onClick={() => router.back()}>{t('back')}</Button>
                 <Link href="/final">

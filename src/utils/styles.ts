@@ -63,3 +63,10 @@ export const customFooter = {
     width: '100%',
     justifyContent: 'flex-end'
 }
+
+export const customLabel = {
+    color: 'white',
+    fontWeight: 600,
+    mb: '4px',
+    width: '100%'
+}

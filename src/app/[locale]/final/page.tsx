@@ -45,7 +45,6 @@ export default function Home() {
             }
         })
         const data = await response.json();
-        console.log(data)
         setCount(data)
     }
 
@@ -56,7 +55,6 @@ export default function Home() {
 
     useEffect(() => {
         getCountData()
-        console.log('sss')
         getLatestData()
     }, [])
 
@@ -64,7 +62,7 @@ export default function Home() {
         <Container sx={customContainer}>
             <Typography sx={customTitle}>{t('final_page')}</Typography>
             <Stack justifyContent="space-between"
-            gap="8px"
+                gap="8px"
                 sx={{
                     width: '100%',
                     flexDirection: {
@@ -80,7 +78,7 @@ export default function Home() {
                     <Select sx={{
                         ...customTextField,
                         width: 'unset'
-                        }} value={lang}>
+                    }} value={lang}>
                         <MenuItem value={'en'}>
                             <Link href="/final" locale="en" style={customLinkSelect}>EN</Link>
                         </MenuItem>
